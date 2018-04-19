@@ -1,0 +1,48 @@
+.intro {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $black;
+    opacity: .5;
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 5;
+    height: 785px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    text-align: center;
+    color: $white;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font: 400 72px/1 Exo2, 'Ubuntu';
+
+    &-sup {
+      margin-bottom: 15px;
+      font: 300 36px/1 Exo2, 'Ubuntu';
+    }
+    &-sub {
+      margin-bottom: 130px;
+      font: 300 36px/1 Exo2, 'Ubuntu';
+    }
+  }
+
+  .btn {
+    width: 355px;
+  }
+}

@@ -1,5 +1,5 @@
 /**
- * Swiper 4.2.2
+ * Swiper 4.2.0
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://www.idangero.us/swiper/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: April 1, 2018
+ * Released on: March 16, 2018
  */
 .swiper-container {
   margin: 0 auto;
@@ -158,15 +158,22 @@
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
-  top: 50%;
-  width: 27px;
-  height: 44px;
-  margin-top: -22px;
+  top: 70px;
+  width: 50px;
+  height: 50px;
   z-index: 10;
   cursor: pointer;
-  background-size: 27px 44px;
+  border-radius: 100%;
+  background-color: $cyan;
+  background-size: 11px 20px;
   background-position: center;
   background-repeat: no-repeat;
+  outline: none;
+  transition: all .25s linear;
+
+  &:hover {
+    background-color: darken($cyan, 15%);
+  }
 }
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
@@ -176,31 +183,15 @@
 }
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-  left: 10px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCNEVEMzk1RjJGODcxMUU4QkRENEZCNUI0QzU3QzlBNCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCNEVEMzk2MDJGODcxMUU4QkRENEZCNUI0QzU3QzlBNCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkI0RUQzOTVEMkY4NzExRThCREQ0RkI1QjRDNTdDOUE0IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkI0RUQzOTVFMkY4NzExRThCREQ0RkI1QjRDNTdDOUE0Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+keXJxwAAApZJREFUeNo0Uz2LFEEUrPe6p+djZ25PT8VfIAiCgWAgCIJyiSAogohooCD+HiMxEAzE4MBE1DtFMDIWBEEQI8FTuXXd3fns6W5fyznNMF9VXe/Vq6Gv8zmKLiAwQzFBs0btPTQBgw2oCjo3LYutfnDvaG+3xlAwUtugpQREA1IU8INDlvDZyXq+TUSFD2GP29zDUIc+UUisA6kCHRy04TMCfBGBEJFF197UaSd6CjAqhddCtCN6ptPTaf5SgFUQ4Kpur6LFK65NL+AUQTi9IrnVp45OJ68FOJUd7bxdXW9rft7oEWyksV7W4FqUoJNVnu3sA93Pur4x78wzeRa1AB28FhdETJsT1cS8YaKNCJw19c0Q7FYlaiNpVBCnwBapV8fXSvNWgIcjcFm3d4ZueGoEEKQhYnnpGdpTemxtmkXgEQGG2aq9G1z/WLsJ6mwU3xukgwE7Atlx/KyVOhaB8665V/f6IfUOTnnxXK6yyCmwDEwE5M3+wV4ZHwbpYcTEeSFkKGWULgkw8fuiWV3yLnyTe1or0vuF4btWaSwTlgF1aC2hdBlqcY1h8WVZ1xe897uRsFEUD8qMbrMbkMRydIYhWSGTOfDIHnM/fJ43y/My/1+RsJ5nD9fz/JaSMiaugfFGJis7ywaIAtSnn+pZ85+gqkn2iDO65qXmdpRUSlmcmhiNFAupryH78c9qsel9mEXCoSx7UobiaqUhgwngOeXIxh45x37FAYsPu6t2M4TwJxKKqXkymvQyos8/FguMTgvBoc88vBhpA6NSfPpgmf8LVEzerGmu0NfFbyStgpF8WInekIxIRaUX+6eBzxyoJtv/ohrCjPPYaSKnH2El16VoF/KXlFYLwb+fNcuL0sP3brQ7fwUYAI9BPuODuCq4AAAAAElFTkSuQmCC");
+  left: 1px;
   right: auto;
 }
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-  right: 10px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAUCAYAAABbLMdoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFOUVCMkZEODJGODcxMUU4QUM3N0I1MEMxNkQzREVFOSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpFOUVCMkZEOTJGODcxMUU4QUM3N0I1MEMxNkQzREVFOSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU5RUIyRkQ2MkY4NzExRThBQzc3QjUwQzE2RDNERUU5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU5RUIyRkQ3MkY4NzExRThBQzc3QjUwQzE2RDNERUU5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+de1lVwAAAo9JREFUeNosks2LFFcUxc+979VXd/WMaPRPCAQEF4EsAlnIwBAwK9GFSBQUzP+TTYLgIoQgKGQTNDBByMpdICAEErIKiEKC2j3dXfXqfdycHqeaarqrzrnv/s69Mob0qK708modrhfYr8kJskUADeYpoWjBlAuyFGhFoYh8sLdonzgpn4G6NgtKMZgKJNdoTWAVoNsw3mKZSYDZYj57Ikif5qzQWJD4GfzEu0YVPHQzuJ/X6821E4PI4tze/Gnr5ZOWQs0N6qAobId+aK0ZW9OflmG4QUOkYX/Wd0dO3cdBEmKd0RiVnmL64agqk/txM4Sb/JlFsN/vd0d9XS51k4ezjJoMOiHwfMVEiBTy4+04fvneIGe7dv6Lc3Ix+owCgYr3EPbk3YhV7bEe5OHxONzdGVTkfLvfPPNV95E3tjFL/KrYEyNr8oTGD1hP9t12GO7RwPTkwqKrnjG7D+Wf9TvM2IZPFfkzMkH8WMOEYJ181bfNNzQJc//Li7QnAIEAfIZqdBAfYV74vOIo3l+2m9HcAqxQxkicRgwNYcSjcnqv69zXJ1XNXq5C/EIjXwgT9xIR2XoHI2y50zfNt6fC1+/G4UBG/O3VHJJSkBwqZq6t3t5rm/unwn/XQzyIyf5UHalJrMpqxSv3LN8g0AMK3U64WoYDaPnDVEnD8TXsuSkMHHK977vvd0Ize/N2NRxuRV/kHTgDkNJCByV9Y1fP9NUPp8Ll2zEeqqXfzQU4sZOd3g3CL1Su9LP6If9VjGe5PB4PfZLfTGos2N6Wi+ayYXJ+F3b5j3twjsLjzWb8fJvs+VRHzItDjjVZCpkGRA5NQ05HhHm12o5XWOB55BJ0udrNkqs5oeXxweZIVcb/AgwAHJtQImqnMZIAAAAASUVORK5CYII=");
+  right: 1px;
   left: auto;
-}
-.swiper-button-prev.swiper-button-white,
-.swiper-container-rtl .swiper-button-next.swiper-button-white {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-}
-.swiper-button-next.swiper-button-white,
-.swiper-container-rtl .swiper-button-prev.swiper-button-white {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E");
-}
-.swiper-button-prev.swiper-button-black,
-.swiper-container-rtl .swiper-button-next.swiper-button-black {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
-}
-.swiper-button-next.swiper-button-black,
-.swiper-container-rtl .swiper-button-prev.swiper-button-black {
-  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23000000'%2F%3E%3C%2Fsvg%3E");
 }
 .swiper-button-lock {
   display: none;
@@ -365,15 +356,13 @@ button.swiper-pagination-bullet {
   -ms-transform-origin: right top;
   transform-origin: right top;
 }
-.swiper-container-horizontal > .swiper-pagination-progressbar,
-.swiper-container-vertical > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-horizontal > .swiper-pagination-progressbar {
   width: 100%;
   height: 4px;
   left: 0;
   top: 0;
 }
-.swiper-container-vertical > .swiper-pagination-progressbar,
-.swiper-container-horizontal > .swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+.swiper-container-vertical > .swiper-pagination-progressbar {
   width: 4px;
   height: 100%;
   left: 0;

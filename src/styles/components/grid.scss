@@ -3,6 +3,7 @@
 .container {
   @include make-container();
   @include make-container-max-widths();
+  padding: 0 15px;
 }
 
 // Fluid container

@@ -3,6 +3,7 @@
 window.$ = window.jQuery = require('jquery');
 
 import Swiper from 'swiper';
+window.Swiper = Swiper;
 
 require('./libs/index');
 
@@ -10,14 +11,12 @@ require('./libs/index');
 //----------------------------------------------
 require('./utils/index');
 
-//----------------------------------------------
+// app
+//---------------------------------------------
+require('./components/swiper/index');
+require('./components/fadeIn/index');
 
 $(document).ready(function () {
-    var mySwiper = new Swiper ('.swiper-container', {
-        loop: true
-    });
-
-	$('.js-example-basic-single').select2();
 
 	$('.popup-modal').magnificPopup({
 		type: 'inline',

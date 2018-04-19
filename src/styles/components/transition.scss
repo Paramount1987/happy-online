@@ -18,3 +18,14 @@
   overflow: hidden;
   transition: height .15s;
 }
+//--------------------------------
+.js-fade-in {
+  opacity: 0;
+  transform: translate3d(0,25px,0);
+  transition: opacity 1s ease,transform 1s ease
+}
+
+.js-fade-in.is-ready {
+  opacity: 1;
+  transform: translateZ(0)
+}

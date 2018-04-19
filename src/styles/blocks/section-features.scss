@@ -1,0 +1,35 @@
+.s-features {
+  padding: 70px 0;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.list-features {
+  margin: 0;
+  padding: 0 100px;
+  list-style: none;
+  font: 300 30px/1.3 Exo2, 'Ubuntu';
+  color: #37474f;
+
+  > li {
+    display: flex;
+    width: 100%;
+    margin-bottom: 35px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .ok-icon {
+    flex: 1 0 auto;
+    width: 70px;
+    height: 70px;
+    margin-right: 25px;
+    border-radius: 100%;
+    border: 1px solid #000;
+    background: url("./images/i-ok.png") no-repeat center;
+    background-size: 50px 50px;
+  }
+}

@@ -1,0 +1,64 @@
+.s-coaches {
+  padding: 60px 0;
+  background-color: $pink;
+
+  h2 {
+    margin-bottom: 30px;
+    color: $white;
+  }
+}
+
+.coaches {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 35px;
+
+  .link-vk {
+    width: 32px;
+    height: 20px;
+    margin-right: 8px;
+    opacity: .8;
+  }
+  .link-inst {
+    opacity: .8;
+  }
+}
+
+.coach {
+  &-item {
+    width: 45%;
+    color: $white;
+  }
+
+  &-pic-wrap {
+    width: 352px;
+    height: 352px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 100%;
+    border: 1px solid $white;
+  }
+
+  &__pic {
+    width: 330px;
+    height: 330px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid $white;
+    font-size: 36px;
+  }
+
+  &__descr {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.3;
+  }
+}

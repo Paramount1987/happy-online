@@ -1,0 +1,23 @@
+.s-feedback {
+  padding-top: 50px;
+  background-color: $pink;
+
+  h2 {
+    color: $white;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 60px;
+  }
+
+  &-left,
+  &-right {
+    width: 45%;
+    outline: 1px solid #000;
+  }
+}

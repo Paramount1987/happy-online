@@ -1,10 +1,16 @@
+{% set title = 'Мастерская женского счастья Online' %}
+
 {% extends './inc/page.twig' %}
 
 {% block content %}
-	<div class="container">
-		<h1>Webpack 3! Twig!</h1>
-
-		<a href="components.html">Components!</a>
-	</div>
+	{% include 'inc/intro.twig' %}
+	{% include 'inc/sections/section-description.twig' %}
+	{% include 'inc/sections/section-target.twig' %}
+	{% include 'inc/sections/section-features.twig' %}
+	{% include 'inc/sections/section-coaches.twig' %}
+	{% include 'inc/sections/section-reviews.twig' %}
+	{% include 'inc/sections/section-steps.twig' %}
+	{% include 'inc/sections/section-feedback.twig' %}
+	{% include 'inc/sections/sections-questions.twig' %}
 
 {% endblock %}

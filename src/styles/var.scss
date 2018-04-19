@@ -23,7 +23,7 @@ $black:    #000 !default;
 $blue:    #007bff !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
-$pink:    #e83e8c !default;
+$pink:    #c6a1c8 !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #ffc107 !default;
@@ -38,6 +38,7 @@ $cyan:    #17a2b8 !default;
 // Settings for the `<body>` element.
 
 $body-bg:                   $white !default;
+$body-color:                #333333 !default;
 
 // Links
 //
@@ -72,7 +73,7 @@ $grid-breakpoints: (
 $container-max-widths: (
         sm: 720px,
         md: 960px,
-        lg: 1140px
+        lg: 1170px
 ) !default;
 
 //@include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -82,9 +83,10 @@ $container-max-widths: (
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-sans-serif:      'Ubuntu', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              16px;
+$font-weight-base:            400;

@@ -6,11 +6,15 @@
 
 .btn {
   display: inline-block;
+  height: 65px;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
   border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 24px;
+  transition: background-color .25s ease-out;
 
   &:focus,
   &.focus {
@@ -31,10 +35,28 @@
   &:not(:disabled):not(.disabled):active,
   &:not(:disabled):not(.disabled).active {
     background-image: none;
-    background-color: #007bff;
+    //background-color: #007bff;
 
     &:focus {
 
+    }
+  }
+
+  &-pink {
+    background-color: $pink;
+    color: $white;
+
+    &:hover {
+      background-color: darken($pink, 15%);
+    }
+  }
+  &-white {
+    background-color: $white;
+    color: $pink;
+
+    &:hover {
+      background-color: darken($pink, 25%);
+      color: $white;
     }
   }
 }
@@ -88,5 +110,13 @@ input[type="reset"],
 input[type="button"] {
   &.btn-block {
     width: 100%;
+  }
+}
+
+// button size
+
+.btn {
+  &-lg {
+    width: 360px;
   }
 }

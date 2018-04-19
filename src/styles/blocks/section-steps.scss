@@ -1,0 +1,44 @@
+.s-steps {
+  padding: 55px 0;
+
+  h2 {
+    margin-bottom: 30px;
+    color: $pink;
+  }
+}
+
+.list-steps {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    width: 20%;
+    margin-bottom: 20px;
+    padding-right: 15px;
+  }
+}
+
+.step-item {
+
+  &__pic {
+    display: block;
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    opacity: .8;
+  }
+
+  &__st {
+    margin-bottom: 15px;
+    color: $pink;
+    font: 400 46px/1 Exo2, 'Ubuntu';
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    font-weight: 300;
+  }
+}

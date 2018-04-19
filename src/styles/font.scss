@@ -1,1 +1,5 @@
-//@include font-face(Circe, '../fonts/Circe/Circe-Bold', 600, normal, woff2 woff);
+@include font-face(Exo2, '../fonts/Exo2/Exo2-MediumCondensed', 400, normal, woff2 woff);
+@include font-face(Exo2, '../fonts/Exo2/Exo2-LightCondensed', 300, normal, woff2 woff);
+@include font-face(Exo2, '../fonts/Exo2/Exo2-Bold', 600, normal, woff2 woff);
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&subset=cyrillic');
