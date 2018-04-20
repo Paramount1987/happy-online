@@ -14,4 +14,10 @@
   &__counter {
     font: 700 48px/1 'Ubuntu', sans-serif;
   }
+
+  @include media-breakpoint-down(xs) {
+    &__counter {
+      font-size: 40px;
+    }
+  }
 }

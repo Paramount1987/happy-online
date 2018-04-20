@@ -17,7 +17,7 @@
 			background-color: #e5cde6;
 		}
 	</style>
-	<link rel="stylesheet" href="css/style.css?1524254577033">
+	<link rel="stylesheet" href="css/style.css?1524257206363">
 </head>
 <body>
 <div id="preloader"></div>
@@ -569,38 +569,85 @@
 </footer>
 
 
+<script src="js/index.js?1524257206363"></script>
 <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Apr 24, 2018 21:22:00").getTime();
-    // Update the count down every 1 second
-    var x = setInterval(function() {
+	var $time = $('#timer');
+    var $clock = $('#timer-counter'),
+        eventTime = moment('25-04-2018 23:48:00', 'DD-MM-YYYY HH:mm:ss').unix(),
+        currentTime = moment().unix(),
+        diffTime = eventTime - currentTime,
+        duration = moment.duration(diffTime * 1000, 'milliseconds'),
+        interval = 1000;
 
-        // Get todays date and time
-        var now = new Date().getTime();
+    // if time to countdown
+    if(diffTime > 0) {
 
-        // Find the distance between now an the count down date
-        var distance = countDownDate - now;
+        var $d = $('<span class="days" ></span>').appendTo($clock),
+            $h = $('<span class="hours" ></span>').appendTo($clock),
+            $m = $('<span class="minutes" ></span>').appendTo($clock),
+            $s = $('<span class="seconds" ></span>').appendTo($clock);
 
-        // Time calculations for days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-	    console.log(days);
-        var hours = days * 24;
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var intervalID =  setInterval(function(){
 
-	    hours = hours < 10 ? '0' + hours : hours;
-        minutes = minutes < 10 ? '0' + minutes : minutes;
-        seconds = seconds < 10 ? '0' + seconds : seconds;
-        document.getElementById("timer-counter").innerHTML = hours + ": " + minutes + ": " + seconds;
+            duration = moment.duration(duration.asMilliseconds() - interval, 'milliseconds');
+            var d = moment.duration(duration).days(),
+                h = moment.duration(duration).hours(),
+                m = moment.duration(duration).minutes(),
+                s = moment.duration(duration).seconds();
 
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("timer").style.display = 'none';
-        }
-    }, 1000);
+            if (!d) $d.fadeOut();
+
+            d = $.trim(d).length === 1 ? '0' + d + ': ' : d + ': ';
+            h = $.trim(h).length === 1 ? '0' + h + ': ' : h + ': ';
+            m = $.trim(m).length === 1 ? '0' + m + ': ' : m + ': ';
+            s = $.trim(s).length === 1 ? '0' + s : s;
+
+            // show how many hours, minutes and seconds are left
+            $d.text(d);
+            $h.text(h);
+            $m.text(m);
+            $s.text(s);
+
+            if (duration < 0) {
+                clearInterval(intervalID);
+                $time.fadeOut(0);
+            }
+
+        }, interval);
+
+    }
+    else {
+        $time.fadeOut(0);
+    }
+    // // Set the date we're counting down to
+    // var countDownDate = new Date("Apr 24, 2018 21:22:00").getTime();
+    // // Update the count down every 1 second
+    // var x = setInterval(function() {
+    //
+    //     // Get todays date and time
+    //     var now = new Date().getTime();
+    //
+    //     // Find the distance between now an the count down date
+    //     var distance = countDownDate - now;
+    //
+    //     // Time calculations for days, hours, minutes and seconds
+    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    //     //var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    //     console.log(days);
+    //     var hours = days * 24;
+    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //
+    //     hours = hours < 10 ? '0' + hours : hours;
+    //     minutes = minutes < 10 ? '0' + minutes : minutes;
+    //     seconds = seconds < 10 ? '0' + seconds : seconds;
+    //     document.getElementById("timer-counter").innerHTML = hours + ": " + minutes + ": " + seconds;
+    //
+    //     if (distance < 0) {
+    //         clearInterval(x);
+    //         document.getElementById("timer").style.display = 'none';
+    //     }
+    // }, 1000);
 </script>
-
-<script src="js/index.js?1524254577034"></script>
 </body>
 </html>

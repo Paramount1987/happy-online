@@ -4091,6 +4091,9 @@ b {
     text-transform: uppercase; }
   .timer__counter {
     font: 700 48px/1 'Ubuntu', sans-serif; }
+  @media (max-width: 767.98px) {
+    .timer__counter {
+      font-size: 40px; } }
 
 .s-questions {
   padding: 50px 0;
