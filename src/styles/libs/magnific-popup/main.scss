@@ -242,6 +242,8 @@ button {
   font-size: 28px;
   font-family: Arial, Baskerville, monospace;
 
+  opacity: .5;
+
   &:hover,
   &:focus {
     opacity: 1;

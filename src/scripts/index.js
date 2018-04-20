@@ -13,8 +13,12 @@ require('./utils/index');
 
 // app
 //---------------------------------------------
+import APP from './components/app';
+APP.init();
+
 require('./components/swiper/index');
 require('./components/fadeIn/index');
+require('./components/modal/index');
 
 $(document).ready(function () {
 

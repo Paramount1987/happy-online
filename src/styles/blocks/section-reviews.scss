@@ -5,6 +5,10 @@
   .container {
     padding: 0;
   }
+
+  h2 {
+    margin-bottom: 20px;
+  }
 }
 
 .swiper-reviews {
@@ -27,7 +31,7 @@
     margin-bottom: 25px;
   }
   &-bottom {
-    flex-grow: 1;
+    //flex-grow: 1;
     background-color: $white;
     padding: 15px;
     box-shadow: 0 0 15px 0 rgba(0,0,0,0.2);
@@ -46,8 +50,8 @@
   &__avatar {
     width: 85px;
     height: 85px;
-    margin-bottom: 6px;
     border-radius: 100%;
+    margin-bottom: 10px;
   }
 
   &__img {

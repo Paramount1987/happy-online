@@ -4,3 +4,14 @@
 .text-right {
   text-align: right;
 }
+.text-white {
+  color: $white;
+}
+.text-uppc {
+  text-transform: uppercase;
+}
+
+.text-lg {
+  margin-bottom: 40px;
+  font: 700 72px/1 'Ubuntu', sans-serif;
+}

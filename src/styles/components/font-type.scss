@@ -13,7 +13,10 @@ h1, .h1 { }
 h2, .h2 {
   font: 400 60px/1 Exo2, 'Ubuntu';
 }
-h3, .h3 { }
+h3, .h3 {
+  margin-bottom: 20px;
+  font: 300 24px/1.2 'Ubuntu', sans-serif;
+}
 h4, .h4 { }
 h5, .h5 { }
 h6, .h6 { }

@@ -1,5 +1,37 @@
 .form {
   background-color: $white;
+  border-radius: 4px;
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, .2);
+
+  &-popup {
+    position: relative;
+    max-width: 460px;
+    margin: 0 auto;
+  }
+
+  &-inner {
+    padding: 30px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  .btn {
+    width: 100%;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.popup-success {
+  position: relative;
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 30px 0;
+  background-color: $white;
 }
 //
 // Textual form controls
@@ -8,13 +40,15 @@
 .form-control {
   display: block;
   width: 100%;
-  padding: 5px;
+  height: 55px;
+  padding: 0 15px;
   font-size: $font-size-base;
   line-height: 1;
   color: $black;
   background-color: transparent;
   background-clip: padding-box;
-  border: 1px solid $black;
+  border: 1px solid rgba($black, .25);
+  border-radius: 4px;
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -40,6 +74,10 @@
     // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
     opacity: 1;
   }
+
+  &.error {
+    border-color: red;
+  }
 }
 
 // Form groups
@@ -48,7 +86,7 @@
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  margin-bottom: 10px;
+  margin-bottom: 25px;
 }
 
 
@@ -66,5 +104,12 @@
   > [class*="col-"] {
     padding-right: 5px;
     padding-left: 5px;
+  }
+}
+
+label {
+  &.error {
+    color: red;
+    font-size: 14px;
   }
 }

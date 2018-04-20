@@ -3,6 +3,7 @@ $(document).ready(function () {
         slidesPerView: 3,
         spaceBetween: 30,
         loop: true,
+        autoHeight: true,
         // Navigation arrows
         navigation: {
             nextEl: '.swiper-button-next',

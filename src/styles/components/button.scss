@@ -90,6 +90,11 @@ fieldset:disabled a.btn {
   // No need for an active state here
 }
 
+a.btn {
+  text-decoration: none;
+  line-height: 60px;
+}
+
 //
 // Block button
 //

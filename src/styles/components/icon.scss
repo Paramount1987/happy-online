@@ -1,0 +1,26 @@
+.i-logo {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 30px auto;
+  background-image: url("images/i-logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &--b {
+    background-image: url("images/i-logo-b.png");
+  }
+  &--p {
+    background-image: url("images/i-logo-p.png");
+  }
+}
+
+.i-success {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 30px auto;
+  background-image: url("images/i-success.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

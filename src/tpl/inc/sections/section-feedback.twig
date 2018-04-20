@@ -5,30 +5,34 @@
 		<div class="s-feedback-inner js-fade-in">
 			<div class="s-feedback-left">
 				<div class="text-center">
-					<h3>Успейте купить участие по самой выгодной цене!</h3>
-					<p>7000 ₽</p>
+					<h3 class="text-white text-uppc">
+						Успейте купить участие<br>по самой выгодной цене!
+					</h3>
+					<p class="text-lg text-white">7000 ₽</p>
 				</div>
-				<div class="timer">
+				<div id="timer" class="timer">
 					<div class="timer__title">До повышения осталось:</div>
 					<div class="timer__counter">
-						01: 15: 18
+						<div id="timer-counter"></div>
 					</div>
 				</div>
 			</div>
 			<div class="s-feedback-right">
-				<form class="form">
-					<p class="form__title">Подать заявку</p>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Введите ваш адрес эл.почты">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Введите ваше имя">
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Введите ваш телефон">
-					</div>
-					<div class="form-group">
-						<button class="btn btn-pink">Участвовать</button>
+				<form class="form js-form-validate">
+					<div class="form-inner">
+						<p class="form__title">Подать заявку</p>
+						<div class="form-group">
+							<input type="text" id="email" class="form-control" placeholder="Введите ваш адрес эл.почты" name="email">
+						</div>
+						<div class="form-group">
+							<input type="text" id="name" class="form-control" placeholder="Введите ваше имя" name="name">
+						</div>
+						<div class="form-group">
+							<input type="text" id="phone" class="form-control js-phone" placeholder="Введите ваш телефон" name="phone">
+						</div>
+						<div class="form-group">
+							<button class="btn btn-pink">Участвовать</button>
+						</div>
 					</div>
 				</form>
 			</div>

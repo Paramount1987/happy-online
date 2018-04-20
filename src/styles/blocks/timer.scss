@@ -1,6 +1,17 @@
 .timer {
+  padding: 10px 0;
   background-color: rgba($white, .17);
   border: 1px dashed $white;
   color: $white;
   text-align: center;
+
+  &__title {
+    margin-bottom: 10px;
+    font: 300 24px/1 'Ubuntu', sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__counter {
+    font: 700 48px/1 'Ubuntu', sans-serif;
+  }
 }
