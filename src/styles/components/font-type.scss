@@ -49,10 +49,8 @@ b {
 }
 
 
-//
-// Lists
-//
-
-.list-unstyled {
-
+@include media-breakpoint-down(sm) {
+  h2, .h2 {
+    font: 400 50px/1 Exo2, 'Ubuntu';
+  }
 }

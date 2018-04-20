@@ -6,6 +6,10 @@
     margin-bottom: 20px;
     color: $white;
   }
+
+  @include media-breakpoint-down(sm) {
+
+  }
 }
 
 .list-target {
@@ -20,6 +24,13 @@
     flex-direction: column;
     width: 22.5%;
     margin: 0 0 30px 2.5%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    > li {
+      width: 30.5%;
+      margin-bottom: 20px;
+    }
   }
 }
 

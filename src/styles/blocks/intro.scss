@@ -45,4 +45,25 @@
   .btn {
     width: 355px;
   }
+
+  @include media-breakpoint-down(sm) {
+    &-inner {
+      height: 650px;
+    }
+
+    &__title {
+      font-size: 50px;
+      &-sup {
+        font-size: 30px;
+      }
+      &-sub {
+        margin-bottom: 90px;
+        font-size: 30px;
+      }
+    }
+
+    .btn {
+      width: 280px;
+    }
+  }
 }

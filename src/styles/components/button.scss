@@ -125,3 +125,19 @@ input[type="button"] {
     width: 360px;
   }
 }
+
+@include media-breakpoint-down(sm) {
+
+  .btn {
+    height: 50px;
+    font-size: 18px;
+
+    &-lg {
+      width: 280px;
+    }
+  }
+
+  a.btn {
+    line-height: 45px;
+  }
+}

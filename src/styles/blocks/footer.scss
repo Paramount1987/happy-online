@@ -34,4 +34,16 @@
       text-decoration: none;
     }
   }
+
+  @include media-breakpoint-down(sm) {
+
+    &__logo {
+      width: 34px;
+      height: 35px;
+    }
+
+    .link-phone {
+      font-size: 22px;
+    }
+  }
 }

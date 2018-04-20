@@ -19,4 +19,15 @@
   &-right {
     width: 45%;
   }
+
+  @include media-breakpoint-down(sm) {
+
+    &-inner {
+      padding: 50px 0;
+    }
+    &-left,
+    &-right {
+      width: 48%;
+    }
+  }
 }
