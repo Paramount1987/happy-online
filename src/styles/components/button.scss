@@ -141,3 +141,12 @@ input[type="button"] {
     line-height: 45px;
   }
 }
+
+@include media-breakpoint-down(xs) {
+  .btn {
+
+    &-lg {
+      width: 230px;
+    }
+  }
+}

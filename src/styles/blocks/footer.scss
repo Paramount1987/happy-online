@@ -46,4 +46,14 @@
       font-size: 22px;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    &-col {
+      margin-bottom: 20px;
+
+      &.text-right {
+        margin-left: auto;
+      }
+    }
+  }
 }

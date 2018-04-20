@@ -56,4 +56,15 @@
       font-size: 38px;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    padding: 45px 0;
+
+    p {
+      font-size: 19px;
+    }
+    b {
+      font-size: 26px;
+    }
+  }
 }

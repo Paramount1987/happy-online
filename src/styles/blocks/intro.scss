@@ -66,4 +66,20 @@
       width: 280px;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    &-inner {
+      height: 568px;
+    }
+    &__title {
+      font-size: 30px;
+      &-sup {
+        font-size: 20px;
+      }
+      &-sub {
+        margin-bottom: 50px;
+        font-size: 20px;
+      }
+    }
+  }
 }

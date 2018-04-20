@@ -6,6 +6,9 @@
     margin-bottom: 30px;
     color: $white;
   }
+  @include media-breakpoint-down(xs) {
+    padding: 35px 0;
+  }
 }
 
 .coaches {
@@ -22,6 +25,9 @@
   }
   .link-inst {
     opacity: .8;
+  }
+  @include media-breakpoint-down(xs) {
+    padding: 0;
   }
 }
 
@@ -70,6 +76,23 @@
       &:last-of-type {
         margin-bottom: 0;
       }
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+
+    &-pic-wrap {
+      width: 152px;
+      height: 152px;
+    }
+
+    &__pic {
+      width: 130px;
+      height: 130px;
+    }
+
+    &__title {
+      font-size: 26px;
     }
   }
 }

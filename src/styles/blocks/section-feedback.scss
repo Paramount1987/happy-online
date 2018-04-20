@@ -30,4 +30,18 @@
       width: 48%;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    &-inner {
+      padding: 35px 0;
+    }
+    &-left,
+    &-right {
+      width: 100%;
+    }
+
+    &-left {
+      margin-bottom: 30px;
+    }
+  }
 }

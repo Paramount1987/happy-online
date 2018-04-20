@@ -32,6 +32,14 @@
       margin-bottom: 20px;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: 0;
+    > li {
+      width: 100%;
+      margin-left: 0;
+    }
+  }
 }
 
 .target {

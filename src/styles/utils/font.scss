@@ -15,3 +15,10 @@
   margin-bottom: 40px;
   font: 700 72px/1 'Ubuntu', sans-serif;
 }
+
+@include media-breakpoint-down(xs) {
+  .text-lg {
+    margin-bottom: 30px;
+    font: 700 52px/1 'Ubuntu', sans-serif;
+  }
+}
