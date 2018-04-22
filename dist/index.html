@@ -6,9 +6,21 @@
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Мастерская женского счастья Online</title>
-	<link rel="stylesheet" href="css/style.css?1524339939887">
+	<style>
+    		#preloader {
+    			position: fixed;
+        		z-index: 999;
+    			top: 0;
+    			left: 0;
+    			right: 0;
+    			bottom: 0;
+    			background-color: #e5cde6;
+    		}
+    	</style>
+	<link rel="stylesheet" href="css/style.css?1524383769640">
 </head>
 <body>
+<div id="preloader"></div>
 <header class="header">
 	<div class="container">
 		<div class="header-row">
@@ -57,7 +69,7 @@
 			</div>
 			<div class="s-descr-right">
 				<div class="s-descr__video">
-					
+					<iframe class="video-iframe" src="https://www.youtube.com/embed/mxcYza33vWQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 				</div>
 			</div>
 		</div>
@@ -557,7 +569,7 @@
 </footer>
 
 
-<script src="js/index.js?1524339939887"></script>
+<script src="js/index.js?1524383769641"></script>
 <script>
 	var $time = $('#timer');
     var $clock = $('#timer-counter'),

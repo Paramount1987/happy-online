@@ -8,3 +8,5 @@ require('./jquery.magnific-popup.min');
 require('./jquery.mask.min');
 require('./jquery.validate');
 window.moment = require('./moment');
+import Swiper from './swiper';
+window.Swiper = Swiper;

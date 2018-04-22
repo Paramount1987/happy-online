@@ -6,9 +6,9 @@ const APP = {
         this.formValidate();
     },
     domReady: function () {
-        // $(document).ready(function () {
-        //     $('#preloader').fadeOut(500);
-        // });
+        $(document).ready(function () {
+            $('#preloader').fadeOut(500);
+        });
     },
 
 
