@@ -2,3 +2,8 @@
 @import "flex";
 @import "spacing";
 @import "font";
+
+.img-fluid {
+  display: block;
+  max-width: 100%;
+}
