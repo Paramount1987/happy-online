@@ -11,6 +11,7 @@ require('./utils/index');
 // app
 //---------------------------------------------
 import APP from './components/app';
+import APP from './components/app';
 APP.init();
 
 require('./components/swiper/index');
