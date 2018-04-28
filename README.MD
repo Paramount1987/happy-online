@@ -1,7 +1,7 @@
 # Frontend Boilerplate. Gulp/Webpack/ES2015
 Простой шаблон frontend-проекта c использованием Gulp и Webpack
 
-- Gulp 4
+- Gulp 4;
 - Версия ECMAScript: ES2015 (ES6)
 
 ## Использование
