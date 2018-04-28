@@ -12,6 +12,7 @@ require('./utils/index');
 import APP from './components/app';
 
 APP.init();
+
 // atom test
 
 require('./components/swiper/index');
