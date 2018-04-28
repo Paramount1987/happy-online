@@ -1,7 +1,6 @@
 // libs
 //----------------------------------------------
 window.$ = window.jQuery = require('jquery');
-
 require('./libs/index');
 
 // utils
@@ -13,6 +12,7 @@ require('./utils/index');
 import APP from './components/app';
 
 APP.init();
+// atom test
 
 require('./components/swiper/index');
 require('./components/fadeIn/index');
