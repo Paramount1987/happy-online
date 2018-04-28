@@ -13,7 +13,7 @@ import APP from './components/app';
 
 APP.init();
 
-// atom test 43
+// atom test 43 new line 33
 
 require('./components/swiper/index');
 require('./components/fadeIn/index');
