@@ -1,5 +1,5 @@
 // libs
-//-------------------------------------------------------
+//----------------------------------------------
 window.$ = window.jQuery = require('jquery');
 
 require('./libs/index');
@@ -11,7 +11,7 @@ require('./utils/index');
 // app
 //---------------------------------------------
 import APP from './components/app';
-import APP from './components/app';
+
 APP.init();
 
 require('./components/swiper/index');
